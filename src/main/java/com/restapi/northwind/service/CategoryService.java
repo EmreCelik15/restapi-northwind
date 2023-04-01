@@ -18,12 +18,10 @@ import java.util.stream.Collectors;
 @Service
 public class CategoryService {
     private final CategoryRepository categoryRepository;
-    private final ModelMapperConfig modelMapperConfig;
     private final CategoryConverter categoryConverter;
 
-    public CategoryService(CategoryRepository categoryRepository, ModelMapper modelMapper, CategoryConverter categoryConverter, ProductConverter productConverter, ModelMapperConfig modelMapperConfig) {
+    public CategoryService(CategoryRepository categoryRepository, CategoryConverter categoryConverter) {
         this.categoryRepository = categoryRepository;
-        this.modelMapperConfig = modelMapperConfig;
         this.categoryConverter = categoryConverter;
     }
 

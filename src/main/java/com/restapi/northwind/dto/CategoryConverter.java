@@ -23,8 +23,10 @@ public class CategoryConverter {
         if (category == null) {
             return new CategoryResponseDto(null, "", "", null);
         }
-        Set<ProductDto> productDto = category.getProducts().stream().map(product -> productConverter.convertToDto(product)).collect(Collectors.toSet());
-        CategoryResponseDto categoryResponseDto = modelMapperConfig.getModelMapper().map(category, CategoryResponseDto.class);
+        Set<ProductDto> productDto = category.getProducts().stream().
+                map(product -> productConverter.convertToDto(product)).collect(Collectors.toSet());
+        CategoryResponseDto categoryResponseDto = modelMapperConfig.getModelMapper().
+                map(category, CategoryResponseDto.class);
         categoryResponseDto.setProductDtos(productDto);
         return categoryResponseDto;
     }

@@ -33,7 +33,6 @@ class CategoryServiceTest {
         categoryRepository = Mockito.mock(CategoryRepository.class);
         categoryConverter = Mockito.mock(CategoryConverter.class);
         categoryService = new CategoryService(categoryRepository, categoryConverter);
-       // categories=Mockito.mock(List.class);
     }
 @DisplayName("should Return Category Response Dto List when Call Category Service Get All Category Method")
     @Test

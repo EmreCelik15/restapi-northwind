@@ -42,6 +42,6 @@ public class CategoryController {
     }
     @GetMapping("/getcategoryname/{name}")
     public ResponseEntity<CategoryResponseDto> getCategoryName(@PathVariable(value = "name") @NotBlank String categoryName){
-        return ResponseEntity.ok(categoryService.getCategoryName(categoryName));
+        return ResponseEntity.ok(categoryService.getCategoryByName(categoryName));
     }
 }

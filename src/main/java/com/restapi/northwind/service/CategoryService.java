@@ -45,7 +45,7 @@ public class CategoryService {
         return categoryResponseDto;
     }
 
-    public CategoryResponseDto getCategoryName(String categoryName) {
+    public CategoryResponseDto getCategoryByName(String categoryName) {
         return categoryConverter.convertToResponseDto(categoryRepository.findCategoryByCategoryName(categoryName)
                 .orElseThrow(()->new CategoryNotFoundException("Category Not Found!")));
     }

@@ -17,9 +17,9 @@ import java.util.Set;
 public class ProductDto {
     private Long id;
     private String productName;
-    private SupplierDto supplierDto;
+    private Long supplierId;
     private CategoryRequestDto categoryRequestDto;
-    private Set<OrderDetail> orderDetail;
+    private Set<OrderDetailDto> orderDetailDtos;
     private String unit;
     private BigDecimal price;
 }
